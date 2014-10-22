@@ -1,5 +1,5 @@
 note
-	description : "Microbes application root class"
+	description : "Our super awesome game"
 	date        : "$Date$"
 	revision    : "$Revision$"
 
