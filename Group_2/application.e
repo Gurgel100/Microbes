@@ -17,7 +17,7 @@ feature {NONE} -- Initialization
 	make
 			-- Run application.
 		do
-			--| Add your code here
+			-- Test xD
 			print ("Hello Eiffel World!%N")
 		end
 
