@@ -1,7 +1,7 @@
 A card game where 2 players fight each other using cards representing microbes.
+
 The game is meant for Introduction to Programming students at ETH as an alternative,
 hopefully more interesting activity as opposed to the classic front-end exercise session.
-Students are divided in small teams (2-4 people), each in charge of different parts of the system.
-Each team works separately but needs to coordinate with the other teams in such a way that the merged files
-will work together smoothly.
+Students are divided in small teams (2-4 people), each in charge of different parts of the system. Each team works separately but needs to coordinate with the other teams in such a way that the merged files will work together smoothly.
+
 In the Merged folder you can find the current version of the game. 
