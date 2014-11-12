@@ -7,8 +7,6 @@ note
 deferred class
 	PLAYER_CONTROLLER
 
-
-
 	feature
 
 		player : PLAYER
@@ -18,7 +16,7 @@ deferred class
 			player := a_player
 		end
 
-		deferred do_turn -- look at cards and play one of them or none
+		deferred do_turn(enemy : PLAYER) -- look at cards and play one of them or none
 
 
 end

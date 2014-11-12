@@ -12,11 +12,18 @@ redefine
 	do_turn
 
 	feature
-		do_turn
+		do_turn ( enemy : PLAYER)
 
+		local
+			card_to_play : CARD
 		do
 
-			
+			-- take first card and play it
+			card_to_play := player.hand.cards.first
+
+			-- ??
+			card_to_play.play()
+
 
 		end
 
