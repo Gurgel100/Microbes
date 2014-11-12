@@ -53,7 +53,9 @@ feature
 
 	name: STRING
 
+	-- affect(other: PLAYER or ORGANISM, effect: EFFECT, point_in_time: ???)
 
+	-- attack(other: PLAYER or ORGANISM)
 
 
 end
