@@ -11,9 +11,12 @@ deferred class
 
 		player : PLAYER
 
-		make (a_player : PLAYER)
+		game: MICROBES_GAME
+
+		make (a_player : PLAYER; a_game: MICROBES_GAME)
 		do
 			player := a_player
+			game := a_game
 		end
 
 		deferred do_turn(enemy : PLAYER) -- look at cards and play one of them or none

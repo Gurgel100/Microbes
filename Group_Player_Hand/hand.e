@@ -10,35 +10,36 @@ class
 create
 	make
 
-	feature
+feature
 
-		deck : DECK
-		cards : LIST[CARD]
-		last_card : CARD
+	deck: DECK
 
-	feature {PLAYER}
+	cards: LINKED_LIST [CARD]
 
-		draw
+	last_card: CARD
+
+feature {PLAYER}
+
+	draw
 			-- draws a card from the deck
-			do
-				cards.extend(deck.draw())
-			end
+		do
+			cards.extend (deck.draw)
+		end
 
-		play (card : CARD)
+	play (card: CARD)
 			-- plays a card and removes it from the hand
-			do
-				last_card := cards.remove(card)
-				if last_card /= void then
-					last_card.play()
-				end
+		do
+			last_card := cards.remove (card)
+			if last_card /= void then
+				last_card.play()
 			end
+		end
 
-	feature {NONE}
+feature {NONE}
 
-		make (a_deck : DECK)
-			do
-				deck := a_deck
-			end
-
+	make (a_deck: DECK)
+		do
+			deck := a_deck
+		end
 
 end
