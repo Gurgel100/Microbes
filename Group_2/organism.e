@@ -27,35 +27,16 @@ feature
 			name := a_name
 		end
 
-	set_health_points(a_health: INTEGER)
-		do
-			health_points := a_health
-		end
-
 	set_atp(a_atp: INTEGER)
 		do
 			atp := a_atp
 		end
 
-	set_attack_strength(a_strength: INTEGER)
-		do
-			attack_strength := a_strength
-		end
-
 feature
-
-	health_points: INTEGER
 
 	atp: INTEGER
 		-- energy_cost
 
-	attack_strength: INTEGER
-
 	name: STRING
-
-	-- affect(other: PLAYER or ORGANISM, effect: EFFECT, point_in_time: ???)
-
-	-- attack(other: PLAYER or ORGANISM)
-
 
 end
