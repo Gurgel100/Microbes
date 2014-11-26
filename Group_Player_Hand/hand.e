@@ -28,18 +28,30 @@ feature {PLAYER}
 
 	play (card: CARD)
 			-- plays a card and removes it from the hand
+		require
+			card_exists: card /= Void
+			card_is_in_hand: cards.has (card)
 		do
 			last_card := cards.remove (card)
 			if last_card /= void then
 				last_card.play()
 			end
+		ensure
+			cards.count = old cards.count - 1
 		end
 
 feature {NONE}
 
 	make (a_deck: DECK)
+		require
+			deck_exists: a_deck /= Void
 		do
 			deck := a_deck
+			create cards.make
 		end
+
+invariant
+	deck_exists: deck /= Void
+	cards_exists: cards /= Void
 
 end
