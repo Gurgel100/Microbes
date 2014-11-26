@@ -8,7 +8,6 @@ class
 	PLAYER
 	inherit
 		ATTACKABLE
-	end
 
 create
 	make
@@ -23,7 +22,9 @@ feature {NONE} -- Initialization
 		do
 			deck := a_deck
 			create hand.make (deck)
-			create active_cards
+
+			create {LINKED_LIST}minions.make
+
 			controller := a_controller
 			atp := 0
 			health := 100
@@ -39,12 +40,31 @@ feature
 		require
 			enemy_not_void: a_enemy /= Void
 			enemy_not_dead: not a_enemy.is_dead
+		local
+			card_to_play : CARD
+			enemies : LIST[ATTACKABLE]
 		do
 			if atp < atp_max then
 				atp := atp + 1
 			end
 			hand.draw
-			controller.do_turn (a_enemy)
+
+			card_to_play := controller.choose_card (hand)
+			--card_to_play.play()
+
+			minions.extend(card_to_play)
+
+
+			if an_enemy.minions.is_empty then
+				enemies := a_enemy.minions
+			else
+				-- if there are no minions left, attack the enemy himself
+				create enemies.make
+				enemies.extend(Current)
+			end
+
+			controller.attack(enemies)
+
 		end
 
 	is_dead: BOOLEAN
@@ -52,8 +72,6 @@ feature
 		do
 			Result := health <= 0
 		end
-
-	active_cards: LINKED_LIST[CARD]
 
 feature {PLAYER_CONTROLLER}
 
@@ -63,6 +81,8 @@ feature {PLAYER_CONTROLLER}
 	hand: HAND
 			-- Hand of the player
 
+	minions : LIST[CARD]
+
 feature {NONE}
 
 	deck: DECK
@@ -71,7 +91,7 @@ feature {NONE}
 	controller: PLAYER_CONTROLLER
 			-- Controller which controlls the player
 
-	atp_max: INTEGER := 10
+	atp_max: INTEGER = 10
 
 invariant
 	deck_not_void: deck /= Void

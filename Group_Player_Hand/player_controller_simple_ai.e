@@ -12,19 +12,26 @@ redefine
 	do_turn
 
 	feature
-		do_turn ( enemy : PLAYER)
-
-		local
-			card_to_play : CARD
-		do
-
-			-- take first card and play it
-			card_to_play := player.hand.cards.first
-
-			-- ??
-			card_to_play.play()
 
 
-		end
+
+		choose_card (hand : HAND) : CARD
+			local
+				card_to_play : CARD
+			do
+
+				-- take first card and play it
+				Result := hand.cards.first
+
+
+			end
+
+		attack ( my_minions, enemy_minions : LIST[ATTACKABLE])
+			do
+				if not my_minions.is_empty and not enemy_minions.is_empty then
+					my_minions.first.attack(enemy_minions.first)
+				end
+
+			end
 
 end
