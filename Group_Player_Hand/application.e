@@ -24,6 +24,8 @@ feature {NONE} -- Initialization
 
 			create game.make(create {PLAYER_CONTROLLER_SIMPLE_AI}.make(), create {PLAYER_CONTROLLER_SIMPLE_AI}.make())
 
+			game.start
+
 		end
 
 end
