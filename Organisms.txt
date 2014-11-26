@@ -1,0 +1,26 @@
+"Ebola" 			atp:8 	attack/hp:7/3
+"Bird flu"			atp:4	attack/hp:4/2
+"Pest"				atp:4	attack/hp:3/3
+"Cancer"			atp:6	attack/hp:1/10
+"AIDS"				atp:5	attack/hp:5/4
+"Tripper"			atp:5	attack/hp:2/7
+
+"Streptococcus Pyogenes"	atp:3	attack/hp:3/2
+"Escherichia Coli"		atp:2	attack/hp:2/2
+"Vibrio Cholerae"		atp:2	attack/hp:3/1
+"Enteritis Salmonella"		atp:1	attack/hp:2/1
+"Salmonella Typhi"		atp:2	attack/hp:2/2
+
+-----------------------
+"T-Killer-Cell"			atp:7	attack/hp:8/6
+"Antibiotika"			atp:6	attack/hp:
+"Chemotherapy"			atp:6	attack/hp:8/4
+"Tamiflu"			atp:3	attack/hp:3/3
+"Macrophages"			atp:5	attack/hp:
+"Pus"				atp:5	attack/hp:
+
+"Lactobacillus acidophilus"	atp:3	attack/hp:3/2
+"Bacillus subtilis"		atp:2	attack/hp:2/2
+"Bifidobacterium animalis"	atp:2	attack/hp:2/1
+"Streptococcus thermophilus"	atp:2	attack/hp:2/3
+"Lactobacillus reuteri"		atp:1	attack/hp:1/3
