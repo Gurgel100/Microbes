@@ -7,6 +7,9 @@ note
 class
 	ORGANISM
 
+inherit
+	ATTACKABLE
+
 create
 	make
 
