@@ -48,6 +48,9 @@ feature {NONE}
 		do
 			deck := a_deck
 			create cards.make
+		ensure
+			deck_set: deck = a_deck
+			cards_exists: cards /= Void
 		end
 
 invariant

@@ -11,10 +11,6 @@ feature
 
 	player: detachable PLAYER
 
-	make
-		do
-		end
-
 	set_player (a_player: PLAYER)
 		require
 			a_player_exists: a_player /= Void
@@ -25,10 +21,15 @@ feature
 		end
 
 	choose_card (hand : HAND) : CARD
+		require
+			hand_exists: hand /= Void
 		deferred
 		end
 
 	attack ( my_minions, enemy_minions : LIST[ATTACKABLE])
+		require
+			my_minions_exists: my_minions /= Void
+			enemy_minions_exists: enemy_minions /= Void
 		deferred
 		end
 

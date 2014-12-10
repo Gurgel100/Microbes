@@ -22,7 +22,7 @@ feature {NONE} -- Initialization
 		do
 			--| Add your code here
 
-			create game.make(create {PLAYER_CONTROLLER_SIMPLE_AI}.make(), create {PLAYER_CONTROLLER_SIMPLE_AI}.make())
+			create game.make(create {PLAYER_CONTROLLER_SIMPLE_AI}, create {PLAYER_CONTROLLER_SIMPLE_AI})
 
 			game.start
 

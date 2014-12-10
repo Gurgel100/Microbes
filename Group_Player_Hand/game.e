@@ -60,4 +60,10 @@ feature
 			Result := player1.is_dead or player2.is_dead
 		end
 
+invariant
+	player1_exists: player1 /= Void
+	player2_exists: player2 /= Void
+	c1_exists: c1 /= Void
+	c2_exists: c2 /= Void
+
 end
