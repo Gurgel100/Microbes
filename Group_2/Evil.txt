@@ -1,0 +1,44 @@
+Ebola
+7
+8
+3
+Bird flu
+4
+4
+2
+Pest
+3
+4
+3
+Cancer
+1
+6
+10
+AIDS
+5
+5
+4
+Tripper
+2
+5
+7
+Streptococcus Pyogenes
+3
+3
+2
+Escherichia Coli
+2
+2
+2
+Vibrio Cholerae
+3
+2
+1
+Enteritis Salmonella
+2
+1
+1
+Salmonella Typhi
+2
+2
+2

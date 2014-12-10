@@ -12,12 +12,12 @@
 "Salmonella Typhi"		atp:2	attack/hp:2/2
 
 -----------------------
-"T-Killer-Cell"			atp:7	attack/hp:8/6
-"Antibiotika"			atp:6	attack/hp:
-"Chemotherapy"			atp:6	attack/hp:8/4
+"T-Killer-Cell"			atp:9	attack/hp:8/4
+"Antibiotika"			atp:4	attack/hp:4/4
+"Chemotherapy"			atp:8	attack/hp:6/4
 "Tamiflu"			atp:3	attack/hp:3/3
-"Macrophages"			atp:5	attack/hp:
-"Pus"				atp:5	attack/hp:
+"Macrophages"			atp:4	attack/hp:2/5
+"Pus"				atp:5	attack/hp:1/6
 
 "Lactobacillus acidophilus"	atp:3	attack/hp:3/2
 "Bacillus subtilis"		atp:2	attack/hp:2/2
