@@ -46,4 +46,7 @@ feature
 		do
 			Result := (health_points = 0)
 		end
+
+invariant
+	hp_positive: health_points >= 0
 end
