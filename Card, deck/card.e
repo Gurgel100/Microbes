@@ -17,7 +17,7 @@ feature --Initialization
 		require
 			name_exists: n /= Void
 		do
-			name.make_empty
+			create name.make_empty
 			name.append (n)
 		ensure
 			name_set: name ~ n
@@ -27,36 +27,46 @@ feature
 
 	name: STRING
 			-- Type of card
-
-	defense_value: INTEGER
-			-- Defence value of a card
-
+	atp: INTEGER
+		--
+	hp: INTEGER
+		-- Health point
 	attack_value: INTEGER
-			-- Defence value of a card
+			-- Attack value of a card
+
 
 	number_of_copies: INTEGER
 			-- Number of copies for each card
 
 feature
 
-	set_defense_value (def: INTEGER)
+	set_atp (a_atp: INTEGER)
 			-- Set defense value
 		require
-			defense_value_valid: def > 0
+			atp_positive: a_atp>=0
 		do
-			defence_value := def
+			atp := a_atp
 		ensure
-			denfence_value_set: defence_value = def
+			atp_set: atp = a_atp
 		end
 
-	set_attack_value (at: INTEGER)
+	set_hp (a_hp: INTEGER)
 			-- Set attack value
 		require
-			attack_value_valid: at > 0
+			hp_valid: a_hp >= 0
 		do
-			attack_value := at
+			hp := a_hp
 		ensure
-			attack_value_set: attack_value = at
+			hp_set: hp = a_hp
+		end
+	set_attack (a_attack: INTEGER)
+			-- Set attack value
+		require
+			attack_valid: a_attack >= 0
+		do
+			attack_value := a_attack
+		ensure
+			attack_set: attack_value = a_attack
 		end
 
 end
