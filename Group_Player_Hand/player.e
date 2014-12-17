@@ -23,13 +23,14 @@ feature {NONE} -- Initialization
 			deck := a_deck
 			create hand.make (deck)
 
-			create {LINKED_LIST}minions.make
+
+			create {LINKED_LIST[CARD]}minions.make
 
 			controller := a_controller
 			atp := 0
-			health := 100
+			hp := 100
 		ensure
-			health_is_set: health = 100
+			hp_is_set: hp = 100
 			atp_is_set: atp = 0
 		end
 
@@ -54,26 +55,20 @@ feature
 
 			minions.extend(card_to_play)
 
+			enemies := a_enemy.attackables
 
-			if an_enemy.minions.is_empty then
-				enemies := a_enemy.minions
-			else
-				-- if there are no minions left, attack the enemy himself
-				create enemies.make
-				enemies.extend(Current)
-			end
 
-			controller.attack(enemies)
+			controller.attack(attackables, enemies)
 
 		end
 
 	is_dead: BOOLEAN
 			-- Is the player dead?
 		do
-			Result := health <= 0
+			Result := hp <= 0
 		end
 
-feature {PLAYER_CONTROLLER}
+feature {PLAYER}
 
 	atp: INTEGER
 			-- ATP of the player
@@ -82,6 +77,22 @@ feature {PLAYER_CONTROLLER}
 			-- Hand of the player
 
 	minions : LIST[CARD]
+
+	attackables : LIST[ATTACKABLE]
+	do
+		create {LINKED_LIST[ATTACKABLE]}Result.make
+
+		across minions as m loop
+			Result.extend(m.item)
+		end
+
+		if minions.is_empty then
+			-- if there are no minions left, attack the enemy himself
+
+			Result.extend(Current)
+		end
+
+	end
 
 feature {NONE}
 

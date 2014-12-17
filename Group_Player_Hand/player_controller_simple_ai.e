@@ -25,7 +25,7 @@ feature
 			-- Attack the enemy
 		do
 			if not my_minions.is_empty and not enemy_minions.is_empty then
-				my_minions.first.attack (enemy_minions.first)
+				my_minions.first.fight (enemy_minions.first)
 			end
 		end
 

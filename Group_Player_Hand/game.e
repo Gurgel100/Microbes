@@ -18,8 +18,8 @@ feature {NONE} -- Initialization
 			c1_exists: c1 /= Void
 			c2_exists: c2 /= Void
 		do
-			create player1.make(create {DECK}.make, c1)
-			create player2.make(create {DECK}.make, c2)
+			create player1.make(create {DECK}.make_good, c1)
+			create player2.make(create {DECK}.make_good, c2)
 			controller1 := c1
 			controller2 := c2
 		end
@@ -41,9 +41,9 @@ feature
 				is_finished
 			loop
 				print("Player 1 it's your turn%N")
-				player1.do_turn(player2)
+				player1.perform_turn(player2)
 				print("Player 2 it's your turn%N")
-				player2.do_turn(player1)
+				player2.perform_turn(player1)
 			end
 
 			if player1.is_dead then
@@ -63,7 +63,7 @@ feature
 invariant
 	player1_exists: player1 /= Void
 	player2_exists: player2 /= Void
-	c1_exists: c1 /= Void
-	c2_exists: c2 /= Void
+	--c1_exists: c1 /= Void
+	--c2_exists: c2 /= Void
 
 end

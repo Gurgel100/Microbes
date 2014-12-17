@@ -1,0 +1,42 @@
+note
+	description: "Summary description for {PLAYER_CONTROLLER_AI}."
+	author: ""
+	date: "$Date$"
+	revision: "$Revision$"
+
+class
+	PLAYER_CONTROLLER_AI
+inherit
+	PLAYER_CONTROLLER
+redefine
+	do_turn
+
+	feature
+
+
+		choose_card (hand : HAND) : CARD
+			local
+				card_to_play : CARD
+			do
+
+				-- take first card and play it
+
+				across hand.cards as item loop
+					if item.item() > 
+				end
+
+
+				Result := hand.cards.first
+
+
+			end
+
+		attack ( my_minions, enemy_minions : LIST[ATTACKABLE])
+			do
+				if not my_minions.is_empty and not enemy_minions.is_empty then
+					my_minions.first.attack(enemy_minions.first)
+				end
+
+			end
+
+end

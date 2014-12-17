@@ -16,13 +16,15 @@ feature
 
 	cards: LINKED_LIST [CARD]
 
-	last_card: CARD
+	last_card: detachable CARD
 
 feature {PLAYER}
 
 	draw
 			-- draws a card from the deck
+
 		do
+
 			cards.extend (deck.draw)
 		end
 
@@ -32,9 +34,12 @@ feature {PLAYER}
 			card_exists: card /= Void
 			card_is_in_hand: cards.has (card)
 		do
-			last_card := cards.remove (card)
-			if last_card /= void then
-				last_card.play()
+			cards.prune (card)
+			-- last_card := cards.remove (card)
+			last_card := card
+			if attached last_card as c then
+				--c.play()
+				-- TODO
 			end
 		ensure
 			cards.count = old cards.count - 1
