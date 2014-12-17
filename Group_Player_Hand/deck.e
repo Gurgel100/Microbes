@@ -22,10 +22,11 @@ feature
 		path:PATH
 	do
 		create cards.make
-		create file.make_create_read_write ("C:\..\good.txt")
-		create pool.make_pool(file)
-		file.close
+		create file.make_create_read_write ("good.txt")
 
+		create pool.make_pool(file)
+
+		file.close
 
 		from
 			i:=1
@@ -38,6 +39,7 @@ feature
 			i:=i+1
 			random.forth
 		end
+
 	end
 
 	make_bad
@@ -50,7 +52,7 @@ feature
 		path:PATH
 	do
 		create cards.make
-		create file.make_create_read_write ("C:\..\evil.txt")
+		create file.make_create_read_write ("evil.txt")
 		create pool.make_pool(file)
 		file.close
 
