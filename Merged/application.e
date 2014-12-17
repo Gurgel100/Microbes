@@ -16,9 +16,15 @@ feature {NONE} -- Initialization
 
 	make
 			-- Run application.
+		local
+			game : GAME
+
 		do
-			--| Add your code here
-			print ("Hello Eiffel World!%N")
+
+			create game.make(create {PLAYER_CONTROLLER_SIMPLE_AI}, create {PLAYER_CONTROLLER_SIMPLE_AI})
+
+			game.start
+
 		end
 
 end
