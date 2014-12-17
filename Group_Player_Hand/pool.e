@@ -20,6 +20,7 @@ feature
 		card: CARD
 	do
 		make_empty
+
 		my_file.read_line
 		from
 			i:=1

@@ -22,7 +22,9 @@ feature
 		path:PATH
 	do
 		create cards.make
-		create file.make_create_read_write ("good.txt")
+		
+		create file.make_open_read ("good.txt")
+		--create file.make_create_read_write ("good.txt")
 
 		create pool.make_pool(file)
 
