@@ -1,0 +1,44 @@
+T-Killer-Cell
+8
+9
+4
+Antibiotika
+4
+4
+4
+Chemotherapy
+6
+8
+4
+Tamiflu
+3
+3
+3
+Macrophages
+2
+4
+5
+Pus
+1
+5
+6
+Lactobacillus acidophilus
+3
+3
+2
+Bacillus subtilis
+2
+2
+2
+Bifidobacterium animalis
+2
+2
+1
+Streptococcus thermophilus
+2
+2
+3
+Lactobacillus reuteri
+1
+1
+3
